@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  user-select: none;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #000000;
+  position: relative;
+}
+.circle {
+  position: absolute;
+  border-radius: 100%;
+  z-index: 0;
+}
+.circle1 {
+  top: 3%;
+  left: 29%;
+  width: 208px;
+  height: 208px;
+  background-color: #e84949;
+  box-shadow: rgb(216, 72, 105) 0px 0px 50px 0px;
+  animation: 5s linear 0s infinite alternate circle1Animation;
+}
+.circle2 {
+  left: 48%;
+  top: 48%;
+  width: 304px;
+  height: 304px;
+  background-color: #4e45d5;
+  box-shadow: rgb(86, 72, 216) 0px 0px 50px 0px;
+  animation: 5s linear 0s infinite alternate circle2Animation;
+}
+
+@keyframes circle1Animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes circle2Animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.content-container {
+  color: white;
+  width: 400px;
+  height: 475px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.192);
+}
+
+.content-container > img {
+  width: 160px;
+  height: 160px;
+  margin-top: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.192);
+  border-radius: 100%;
+}
+.username {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.user-title {
+  color: rgb(184, 184, 184);
+  font-size: 1rem;
+  opacity: 60%;
+  font-weight: 600;
+}
+.connect-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 1rem;
+  border: 1.5px solid white;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.507);
+  color: black;
+}
+
+.portfolio > a {
+  color: white;
+  text-decoration: none;
+}
+.portfolio:hover a {
+  color: black;
+}
+.modal-container {
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  z-index: 9;
+  width: 550px;
+  height: 250px;
+  padding: 20px 25px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border: solid rgba(255, 255, 255, 0.432);
+  border-radius: 15px;
+  border-width: 2px;
+  transition: all 0.4s ease;
+  transform-origin: center;
+  transform: scale(0);
+}
+.active {
+  transform: scale(1);
+}
+.findme-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+.findme-col-sub {
+  padding-block: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.icon-list {
+  padding-block: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.icon-list > a {
+  cursor: pointer;
+  font-size: 2rem;
+}
+ion-icon[name="logo-linkedin"] {
+  padding: 1rem;
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+  border-radius: 100%;
+  transition: all 0.4s;
+}
+ion-icon[name="logo-linkedin"]:hover {
+  background-color: #0a66c2;
+  color: white;
+}
+
+ion-icon[name="logo-instagram"] {
+  padding: 1rem;
+  color: #e4405f;
+  border: 1px solid #e4405f;
+  border-radius: 100%;
+  transition: all 0.4s;
+}
+ion-icon[name="logo-instagram"]:hover {
+  background-color: #e4405f;
+  color: white;
+}
+ion-icon[name="logo-whatsapp"] {
+  padding: 1rem;
+  color: #25d366;
+  border: 1px solid #25d366;
+  border-radius: 100%;
+  transition: all 0.4s;
+}
+ion-icon[name="logo-whatsapp"]:hover {
+  background-color: #25d366;
+  color: white;
+}
+ion-icon[name="mail-outline"] {
+  padding: 1rem;
+  color: #cd201f;
+  border: 1px solid #cd201f;
+  border-radius: 100%;
+  transition: all 0.4s;
+}
+ion-icon[name="mail-outline"]:hover {
+  background-color: #cd201f;
+  color: white;
+}
+/* .notify {
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  color: white;
+  z-index: 10;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border: solid rgba(255, 255, 255, 0.432);
+  border-radius: 5px;
+  border-width: 1px;
+  transition: all 0.4s ease;
+  padding: 0.3rem;
+  transform-origin: right;
+  transform: scale(0);
+} */

@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon" />
+    <title>My Profile</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="circle1 circle"></div>
+      <div class="circle2 circle"></div>
+      <div class="content-container">
+        <img src="Assets/logo.png" alt="logo" />
+        <div class="username">SHARUK UFFAIR</div>
+        <div class="user-title">Frontend Developer, Team Liquid</div>
+        <div class="connect-container">
+          <div class="find-me-on btn" onclick="openModal()">
+            <ion-icon name="arrow-redo-outline"></ion-icon>
+            <span>Let Chat!</span>
+          </div>
+          <div class="portfolio btn">
+            <a href="#"
+              >My Portfolio</a
+            >
+            <ion-icon name="open-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <!-- share modal -->
+      <div class="modal-container">
+        <div class="findme-col">
+          <div>Find My Profile</div>
+          <ion-icon
+            name="close-outline"
+            class="close"
+            onclick="closeModal()"
+          ></ion-icon>
+        </div>
+        <div class="findme-col-sub">On:</div>
+        <div class="icon-list">
+          <a href="#" class="icon" onclick="notify()">
+            <ion-icon name="logo-linkedin"> </ion-icon>
+          </a>
+
+          <a href="#" class="icon" onclick="notify()">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+
+          <a href="#" class="icon" onclick="notify()">
+            <ion-icon name="logo-whatsapp"></ion-icon
+          ></a>
+
+          <a href="#" class="icon" onclick="notify()"
+            ><ion-icon name="mail-outline"></ion-icon
+          ></a>
+        </div>
+      </div>
+      <!-- notify -->
+      <!-- <div class="notify">For showcase only.</div> -->
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
